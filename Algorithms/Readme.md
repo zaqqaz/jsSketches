@@ -1,2 +1,2 @@
-[x] SelectionSort
-[x] QuickSort
+- [x] SelectionSort
+- [x] QuickSort
