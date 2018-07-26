@@ -1,1 +1,2 @@
+[x] SelectionSort
 [x] QuickSort
