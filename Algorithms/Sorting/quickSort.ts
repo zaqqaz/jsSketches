@@ -7,7 +7,7 @@
 
 import { swap } from "./helper";
 
-function partition(array: number[], min: number, max: number) {
+export function partition(array: number[], min: number, max: number) {
     const pivot = array[max];
     let q = min;
     for (let i = min; i < max; i++) {
@@ -21,35 +21,10 @@ function partition(array: number[], min: number, max: number) {
     return q;
 }
 
-function quickSort(arr: number[], min: number = 0, max: number = arr.length - 1) {
+export function quickSort(arr: number[], min: number = 0, max: number = arr.length - 1) {
     if (min < max) {
         const pivot = partition(arr, min, max);
         quickSort(arr, min, pivot - 1);
         quickSort(arr, pivot + 1, max);
     }
 }
-
-
-describe("Partition", () => {
-    it("Partition for common case", () => {
-        const array = [9, 7, 5, 11, 12, 2, 14, 3, 10, 4, 6];
-        const q = partition(array, 0, array.length - 1);
-        expect(q).toBe(4);
-        expect(array).toEqual([5, 2, 3, 4, 6, 7, 14, 9, 10, 11, 12]);
-    });
-});
-
-
-describe("QuickSort", () => {
-    it("Should sort basic array", () => {
-        const array = [9, 7, 5, 11, 12, 2, 14, 3, 10, 6];
-        quickSort(array);
-        expect(array).toEqual([2, 3, 5, 6, 7, 9, 10, 11, 12, 14]);
-    });
-
-    it("With negatives numbers and 0", () => {
-        const array = [9, 7, 5, 11, 12, 2, 14, 3, 10, -4, 6, 0];
-        quickSort(array);
-        expect(array).toEqual([-4, 0, 2, 3, 5, 6, 7, 9, 10, 11, 12, 14]);
-    });
-});
