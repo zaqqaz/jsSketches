@@ -4,7 +4,7 @@ type NodeProps = {
     value: number; // just for example
 }
 
-class Node {
+export class Node {
     public left?: Node;
     public right?: Node;
     public value: number;
