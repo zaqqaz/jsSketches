@@ -45,13 +45,13 @@ export function inorderTraversal(root: Node, result: number[] = []): number[] {
     }
 
     if (root.left) {
-        preorderTraversal(root.left, result);
+        inorderTraversal(root.left, result);
     }
 
     result.push(root.value);
 
     if (root.right) {
-        preorderTraversal(root.right, result)
+        inorderTraversal(root.right, result)
     }
 
     return result;
@@ -64,11 +64,11 @@ export function postorderTraversal(root: Node, result: number[] = []): number[] 
     }
 
     if (root.left) {
-        preorderTraversal(root.left, result);
+        postorderTraversal(root.left, result);
     }
 
     if (root.right) {
-        preorderTraversal(root.right, result)
+        postorderTraversal(root.right, result)
     }
 
     result.push(root.value);

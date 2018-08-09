@@ -35,7 +35,7 @@ describe("SelectionSort", () => {
 
 describe("bubbleSort", () => {
     testSort(bubbleSort);
-})
+});
 
 describe("MergeSort", () => {
     testSort(mergeSort);
