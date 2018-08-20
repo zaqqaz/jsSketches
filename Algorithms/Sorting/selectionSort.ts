@@ -20,17 +20,3 @@ export function selectionSort(array: number[]) {
         swap(array, findIndexOfMinimum(array, i), i);
     }
 }
-
-describe("SelectionSort", () => {
-    it("Should sort basic array", () => {
-        const array = [9, 7, 5, 11, 12, 2, 14, 3, 10, 6];
-        selectionSort(array);
-        expect(array).toEqual([2, 3, 5, 6, 7, 9, 10, 11, 12, 14]);
-    });
-
-    it("With negatives numbers and 0", () => {
-        const array = [9, 7, 5, 11, 12, 2, 14, 3, 10, -4, 6, 0];
-        selectionSort(array);
-        expect(array).toEqual([-4, 0, 2, 3, 5, 6, 7, 9, 10, 11, 12, 14]);
-    });
-});

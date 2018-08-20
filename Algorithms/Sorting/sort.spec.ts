@@ -2,6 +2,7 @@ import { partition, quickSort } from "./quickSort";
 import { selectionSort } from "./selectionSort";
 import { bubbleSort } from "./bubbleSort";
 import { mergeSort } from "./mergeSort";
+import { insertionSort } from "./insertionSort";
 
 
 export function testSort(sortFunction: (array: number[]) => void) {
@@ -39,4 +40,8 @@ describe("bubbleSort", () => {
 
 describe("MergeSort", () => {
     testSort(mergeSort);
+});
+
+describe("insertionSort", () => {
+    testSort(insertionSort);
 });
